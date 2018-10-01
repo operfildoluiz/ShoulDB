@@ -1,0 +1,23 @@
+{
+  "name": "shouldb",
+  "version": "0.0.1",
+  "description": "🚀 Manage localStorage as database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lhcgoncalves/ShoulDB.git"
+  },
+  "author": "Luiz Gonçalves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lhcgoncalves/ShoulDB/issues"
+  },
+  "homepage": "https://github.com/lhcgoncalves/ShoulDB#readme",
+  "dependencies": {
+    "@std/esm": "^0.26.0",
+    "nodemon": "^1.18.4"
+  }
+}
