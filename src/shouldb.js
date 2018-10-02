@@ -38,14 +38,22 @@ class ShouldDB {
        return this.getDB(model).filter(obj => obj.__sdbKey === id)[0] || false;
     }
 
-    // find(model, filters) {
-    //     return this.getDB(model).filter(obj => {
-    //         for(var i = 0; i < filters.length; i++) {
-    //             console.log('tentando descobrir se ',obj[filters[i][0]],'===',filters[i][1]);
-    //             return (obj[filters[i][0]] === filters[i][1]);
-    //         }
-    //     }) || false;
-    // }    
+    find(model, filter) {
+        let matches = [], include;
+        this.getDB(model).map(obj => {
+            include = true;
+            for(let prop in filter) {
+                if (obj[prop] === undefined || obj[prop] !== filter[prop] || include === false) {
+                    include = false;
+                }
+            }
+            if (include !== false) {
+                matches.push(obj);
+            }
+        })
+
+        return matches || false;
+    }
 
     create(model, obj) {
 
