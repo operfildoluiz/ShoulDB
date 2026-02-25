@@ -2,9 +2,21 @@
   "name": "shouldb",
   "version": "0.0.1",
   "description": "🚀 Manage localStorage as database",
-  "main": "index.js",
+  "main": "src/shouldb.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "localStorage",
+    "database",
+    "browser",
+    "storage"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node src/shouldb.test.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +28,13 @@
     "url": "https://github.com/lhcgoncalves/ShoulDB/issues"
   },
   "homepage": "https://github.com/lhcgoncalves/ShoulDB#readme",
-  "dependencies": {
+  "exports": {
+    ".": {
+      "require": "./src/shouldb.js",
+      "import": "./src/shouldb.js"
+    }
+  },
+  "devDependencies": {
     "@std/esm": "^0.26.0",
     "nodemon": "^1.18.4"
   }
