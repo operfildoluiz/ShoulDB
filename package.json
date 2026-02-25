@@ -1,5 +1,5 @@
 {
-  "name": "shouldb",
+  "name": "shouldb-localstorage",
   "version": "0.0.1",
   "description": "🚀 Manage localStorage as database",
   "main": "src/shouldb.js",
